@@ -440,6 +440,7 @@ def main():
                 mw.addstr(  6,  8, "R1",)
                 mw.addstr(  5,  15, "R:",)
                 mw.addstr( 14,  8, "R2",)
+                mw.addstr( 13,  15, "R:",)
                 mw.addstr( 10, 11, "▶",curses.A_BOLD)
                 mw.addstr(  2, 12, "▼",curses.A_BOLD)
                 mw.addstr( 22, 24, "▼",curses.A_BOLD)
@@ -461,22 +462,22 @@ def main():
                     mw.addstr( 1, 8, str('  %.2f V  ' % VIN), curses.A_STANDOUT | curses.A_BOLD)
                 else:
                     mw.addstr( 1, 8, str('  %.2f V  ' % VIN), curses.A_BOLD)
-                
+
                 mw.addstr(21, 36, str(' %.1f V ' % VRef), curses.A_STANDOUT | curses.A_BOLD | col5)
                 mw.addstr(21,  9, str('%.3f mA ' % (VdI*1000)))
-                
+
                 if SimMode == 1:
                     mw.addstr( 5, 18, str(' %d Ω ' % R1),curses.A_STANDOUT | curses.A_BOLD)
                 else:
                     mw.addstr( 5, 18, str(' %d Ω ' % R1))
-                
+
                 mw.addstr( 7, 15, str('P: %.3f mW ' % (P1*1000)))
-                
+
                 if SimMode == 2:
                     mw.addstr(13, 18, str(' %d Ω ' % R2),curses.A_STANDOUT | curses.A_BOLD)
                 else:
                     mw.addstr(13, 18, str(' %d Ω ' % R2))
-                
+
                 mw.addstr(15, 15, str('P: %.3f mW ' % (P2*1000)))
 
                 if ClipD:
@@ -568,7 +569,7 @@ def main():
 
 
                 if Run == True:
-                    
+
                     if SimMode == 1:
                         if SimDirection == "U":
                             R1=R1+SimRate
@@ -580,7 +581,7 @@ def main():
                             R2=R2+SimRate
                         elif SimDirection == "D":
                             R2=R2-SimRate
-                    
+
                     if SimMode == 3:
                         if SimDirection == "U":
                             VIN=VIN+SimRate

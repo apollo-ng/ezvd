@@ -3,6 +3,9 @@ EZVD
 
 ![EZVD Screencast](https://raw.githubusercontent.com/apollo-ng/ezvd/master/screencast.gif)
 
+
+
+
 ## Installation
 
 ### Dependencies
@@ -10,6 +13,8 @@ EZVD
   * Python 3.x
     * with UTF support
     * with ncurses support
+
+Every reasonably recent GNU system should have this available.
 
 ### Clone repo
 
